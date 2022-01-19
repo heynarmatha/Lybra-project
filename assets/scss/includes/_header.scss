@@ -1,0 +1,54 @@
+.header-wrapper{
+    // background-color: whitesmoke;
+    .nav-head{
+        h2{
+            font-size: 2rem;
+            @include font-style($font-light);
+            @include media-min-lg-x{
+                font-size: 3rem;
+            }
+        }
+        padding: 20px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media-min-lg-x{
+            padding: 2rem 15px;
+        }
+        @include media-min-xl{
+            width: 80%;
+            margin: 0px auto;
+            padding: 2rem 0;
+        }
+        .menus{
+            @include media-min-lg{
+                display: flex;
+                align-items: center;
+            }
+            .hide{
+                display: none;
+                @include media-min-lg{
+                    display: block;
+                    color: black;
+                    font-size: 18px;
+                    // background-color: red;
+                    margin-right: 15px;
+                    @include font-style($font-bold-light);
+                    padding: 10px 15px;
+                }
+            }
+            .sign{
+                color: black;
+                font-size: 18px;
+                @include font-style($font-bold-light);
+                border: 2px solid black;
+                border-radius: 20px;
+                padding: 10px 15px;
+                &:hover{
+                    background-color: black;
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+}

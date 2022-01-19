@@ -1,0 +1,230 @@
+@import './abstracts/variable';
+@import './mixins/breakpoints';
+@import './abstracts/common';
+@import './includes/header';
+@import './includes/footer';
+
+.banner-wrapper{
+    @include media-min-md{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .banner-section-image{
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .banner-section-content{
+        padding: 2rem 15px;
+        text-align: center;
+        @include media-min-md{
+            text-align: left;
+        }
+        @include media-min-xl{
+            margin-left: 10%;
+            padding: 0;
+        }
+        p{
+            padding: 15px 0;
+            @include font-style($font-light);
+            @include media-min-md{
+                font-size: 20px;
+            }
+            @include media-min-lg-x{
+                font-size: 25px;
+            }
+        }
+        h2{
+            font-size: 1.7rem;
+            @include font-style($font-bold-light);
+            padding-bottom: 15px;
+            @include media-min-md{
+                font-size: 2.3rem;
+                padding-bottom: 20px;
+            }
+            @include media-min-lg{
+                font-size: 3rem;
+            }
+            @include media-min-xl{
+                font-size: 4rem;
+                width: 56%;
+                line-height: 1.2;
+            }
+        }
+        h6{
+            font-size: 15px;
+            @include font-style($font-regular);
+            margin-bottom: 30px;
+            @include media-min-md{
+                font-size: 18px;
+            }
+            @include media-min-lg-x{
+                width: 70%;
+                line-height: 1.4;
+            }
+        }
+        .contact{
+            border: none;
+            box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
+            padding:15px 5px;
+            margin-top: 1rem;
+            color: rgba(128, 128, 128, 0.472);
+            @include media-min-lg-x{
+                width: 50%;
+                padding: 18px 15px;
+                font-size: 18px;
+            }
+        }
+        .btn-contact{
+            background: linear-gradient(150deg, darkorange 40%, #f3ba0efb 60%);
+            border: none;
+            margin-top: 1rem;
+            padding:  15px 8px;
+            color: white;
+            @include font-style($font-bold-medium);
+            border-top-right-radius:5px;
+            border-bottom-right-radius:5px;
+            box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
+            @include media-min-lg-x{
+                padding: 18px 30px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+.luxury-design-wrapper{
+    .luxury-design-content{
+        padding: 30px 15px;
+        text-align: center;
+        @include media-min-xl{
+            text-align: left;
+            width: 30%;
+            margin-left: 10%;
+            padding: 0;
+            margin-bottom: 5rem;
+        }
+        h5{
+            letter-spacing:4px;
+            padding: 15px 0;
+            font-family: $font-family;
+            @include font-style($font-light-bold);
+            @include media-min-xl{
+                padding: 0 0 30px 0;
+                font-size: 1.5rem;
+            }
+        }
+        h2{
+            font-size: 2rem;
+            padding-bottom: 15px;
+            @include font-style($font-bold-light);
+            @include media-min-xl{
+                font-size: 3rem;
+                padding-bottom: 20px;
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 1.3;
+            font-family: $font-family;
+            @include media-min-xl{
+                line-height: 1.5;
+            }
+        }
+    }
+}
+.content-details{
+    padding: 20px;
+    @include media-min-xl{
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 0 4rem 0;
+    }
+    .box-2{
+        @include media-min-xl{
+            margin-top: 50px;
+        }
+    }
+    .box-1{
+        @include media-min-md{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .content-comman{
+            padding: 15px 0;
+            margin: 15px 0;
+            @include media-min-md{
+                padding: 15px 0;
+                width: 32%;
+                &:hover{
+                    box-shadow: 0 8px 8px grey;
+                }
+            }
+            @include media-min-xl{
+                width: 25%;
+                &:hover{
+                    padding:20px 10px;
+                }
+            }
+            h4{
+                padding: 12px 0;
+                @include font-style($font-bold-light);
+                @include media-min-xl{
+                    font-size: 1.5rem;
+                }
+            }
+            p{
+                padding: 12px 0;
+                line-height: 1.5;
+                @include font-style($font-light-bold);
+            }
+        }
+    }
+}
+.video-wrapper{
+    padding: 15px;
+    @include media-min-md{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .video{
+        @include media-min-md{
+            width: 48%;
+        }
+    }
+    .video-content{
+        text-align: center;
+        padding: 20px 0;
+        @include media-min-md{
+            text-align: left;
+            width: 48%;
+        }
+        h5{
+            font-size: 18px;
+            letter-spacing: 2px;
+            padding: 15px 0;
+            @include font-style($font-regular-bold);
+        }
+        h2{
+            padding-bottom: 15px;
+            font-size: 2rem;
+            @include font-style($font-bold-light);
+        }
+        p{
+            font-size: 18px;
+            line-height: 1.2;
+            @include font-style($font-light-bold);
+            padding-bottom: 2rem;
+        }
+        button{
+            padding: 15px 20px;
+            border:none;
+            letter-spacing: 3px;
+            background: linear-gradient(150deg, darkorange 40%, #f3ba0efb 60%);
+            color: white;
+            @include font-style($font-bold-light);
+        }
+    }
+}
