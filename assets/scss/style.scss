@@ -189,10 +189,18 @@
         align-items: center;
         justify-content: space-between;
     }
+    @include media-min-xl{
+        width:80%;
+        margin: 20px auto;
+        padding: 0;
+    }
     .video{
         @include media-min-md{
             width: 48%;
-        }
+        }    
+        @include media-min-xl{
+            width: 46%;
+        }  
     }
     .video-content{
         text-align: center;
@@ -201,30 +209,297 @@
             text-align: left;
             width: 48%;
         }
+        @include media-min-xl{
+            width: 46%;
+        } 
         h5{
             font-size: 18px;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             padding: 15px 0;
-            @include font-style($font-regular-bold);
+            @include font-style($font-light-bold);
         }
         h2{
             padding-bottom: 15px;
             font-size: 2rem;
             @include font-style($font-bold-light);
+            @include media-min-xl-x{
+                font-size: 3.2rem;
+                width: 70%;
+                padding-bottom: 1.6rem;
+            }
         }
         p{
             font-size: 18px;
             line-height: 1.2;
             @include font-style($font-light-bold);
             padding-bottom: 2rem;
+            @include media-min-xl-x{
+                width: 65%;
+                padding-bottom: 4rem;
+                line-height: 1.5;
+            }
         }
         button{
             padding: 15px 20px;
             border:none;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             background: linear-gradient(150deg, darkorange 40%, #f3ba0efb 60%);
             color: white;
             @include font-style($font-bold-light);
+        }
+    }
+}
+.useful-info-wrapper{
+    .useful-info-content{
+        padding: 30px 15px;
+        text-align: center;
+        @include media-min-xl{
+            text-align: left;
+            width: 40%;
+            margin-left: 10%;
+            margin-top: 8rem;
+            margin-bottom: 4rem;
+            padding: 0;
+        }
+        h5{
+            letter-spacing:4px;
+            padding: 15px 0;
+            font-family: $font-family;
+            @include font-style($font-light-bold);
+            @include media-min-xl{
+                padding: 0 0 35px 0;
+                font-size: 1.3rem;
+            }
+        }
+        h2{
+            font-size: 2rem;
+            padding-bottom: 15px;
+            @include font-style($font-bold-light);
+            @include media-min-xl{
+                font-size: 3rem;
+                padding-bottom: 25px;
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 1.3;
+            font-family: $font-family;
+            @include media-min-xl{
+                line-height: 1.8;
+            }
+        }
+    }
+}
+.event-section{
+    padding: 15px;
+    @include media-min-md{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 15px;
+        grid-column-gap: 16px;
+        padding: 3rem 15px;
+    }
+    @include media-min-xl{
+        width: 80%;
+        margin: 0 auto 8rem;
+        padding: 0;
+        grid-row-gap: 40px;
+        grid-column-gap: 30px;
+    }
+    h4{
+        font-size: 12px;
+        @include font-style($font-bold-light);
+        @include media-min-md{
+            font-size: 15px;
+        }
+    }
+    i{
+        margin-right: 6px;
+        @include media-min-md{
+            margin-right: 15px;
+        }
+        @include media-min-xl-x{
+            margin-right: 3rem;
+        }
+    }
+    .event-1{
+        box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px;
+        margin-top: 15px;
+        &:hover{
+            background: linear-gradient(150deg,#473ef5da 20% ,#6058f8 20%, #6b63fffb 20% ,#4640bbe3 40%);
+        }
+        @include media-min-md{
+            padding: 15px 20px;
+            margin: 0;
+        }
+        button{
+            padding: 5px 10px;
+            cursor: not-allowed;
+            border-radius: 5px;
+            font-size: 12px;
+            border: none;
+            color: grey;  
+            opacity: 0.7;
+            @include media-min-md{
+                padding: 10px 15px;
+            }
+        }
+    }
+    .open{
+        box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px;
+        margin-top: 15px;
+        &:hover{
+            background: linear-gradient(150deg,#473ef5da 20% ,#6058f8 20%, #6b63fffb 20% ,#4640bbe3 40%);
+        }
+        @include media-min-md{
+            padding: 15px 20px;
+            margin: 0;
+        }
+        button{
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            border: none;
+            @include font-style($font-bold-light);
+            &:hover{
+                background-color: white;
+                border:1px solid black;
+            }
+            @include media-min-md{
+                padding: 10px 15px;
+            }
+        }
+    }
+}
+.quotes-section{
+    padding: 15px;
+    @include media-min-md{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @include media-min-lg{
+        width: 60%;
+        margin: 20px auto;
+        padding: 0;
+    }
+    .mandino-quote{
+        padding: 10px 0;
+        text-align: center;
+        @include media-min-md{
+            width: 47%;
+        }
+    }
+    .mandino-quote-content{
+        padding: 15px 0;
+        @include media-min-md{
+            width: 47%;
+        }
+        .fas{
+            color: grey;
+            font-size: 30px;
+            margin-bottom: 10px;
+            @include media-min-xl-x{
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+        }
+        h4{
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.3;
+            @include media-min-xl-x{
+                font-size:2rem
+            }
+        }
+        p{
+            padding: 20px 0;
+            @include font-style($font-bold-light);
+            @include media-min-xl-x{
+                padding: 2rem 0;
+                font-size: 20px;
+            }
+        }
+    }
+}
+.awesome-team{
+    padding: 15px;
+    text-align: center;
+    @include media-min-xl{
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+        padding: 5rem 0;
+    }
+    .heading-team{
+        font-size: 20px;
+        @include font-style($font-light-bold);
+        padding: 15px 0;
+        letter-spacing: 5px;
+        @include media-min-xl{
+            padding: 0 0 20px 0;
+            font-size: 25px;
+        }
+    }
+    .our-awesome-team{
+        @include font-style($font-regular);
+        font-size: 1.5rem;
+        padding-bottom :2rem;
+        @include media-min-xl{
+            font-size: 3rem;
+            padding-bottom: 4rem;
+        }
+    }
+    .team{
+        @include media-min-md{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .peoples{
+            box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            @include media-min-md{
+                width: 48%;
+            }
+            &:hover{
+                background: linear-gradient(135deg, rgb(64, 61, 233) 60%, rgba(80, 46, 202, 0.781));
+                color: white;
+            }
+            .image-team{
+                width: 47%;
+                img{
+                    width: 100%;
+                    @include media-min-xl{
+                        width: 150px;
+                    }
+                }
+            }
+            .team-content{
+                width: 47%;
+                text-align: left;
+                h4{
+                    @include  font-style($font-bold-light);
+                }
+                h5{
+                    @include font-style($font-light-bold);
+                    padding: 10px 0;
+                }
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ $screen-md: 767px;
 $screen-lg: 992px;
 $screen-lg-x: 1024px;
 $screen-xl: 1200px;
+$screen-xl-x: 1460px;
 
 /* Mixins - min width
 ================================ */
@@ -38,6 +39,11 @@ $screen-xl: 1200px;
 
 @mixin media-min-xl {
     @media (min-width: #{$screen-xl}) {
+        @content;
+    }
+}
+@mixin media-min-xl-x {
+    @media (min-width: #{$screen-xl-x}) {
         @content;
     }
 }
