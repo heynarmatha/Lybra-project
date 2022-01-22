@@ -66,8 +66,8 @@
         }
         .contact{
             border: none;
-            box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
-            padding:15px 5px;
+            box-shadow: 0 0 18px 2px rgba(128, 128, 128, 0.418);
+            padding : 15px 5px;
             margin-top: 1rem;
             color: rgba(128, 128, 128, 0.472);
             @include media-min-lg-x{
@@ -158,13 +158,13 @@
                 padding: 15px 0;
                 width: 32%;
                 &:hover{
-                    box-shadow: 0 8px 8px grey;
+                    box-shadow: 0 0 12px 2px rgba(128, 128, 128, 0.418);
                 }
             }
             @include media-min-xl{
                 width: 25%;
                 &:hover{
-                    padding:20px 10px;
+                    padding:8px;
                 }
             }
             h4{
@@ -323,7 +323,7 @@
         }
     }
     .event-1{
-        box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
+        box-shadow: 0 0 12px 2px rgba(128, 128, 128, 0.418);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -350,7 +350,7 @@
         }
     }
     .open{
-        box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
+        box-shadow: 0 0 12px 2px rgba(128, 128, 128, 0.418);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -372,7 +372,6 @@
             @include font-style($font-bold-light);
             &:hover{
                 background-color: white;
-                border:1px solid black;
             }
             @include media-min-md{
                 padding: 10px 15px;
@@ -463,18 +462,26 @@
     }
     .team{
         @include media-min-md{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 20px;
+            grid-column-gap: 20px;
+            @include media-min-xl-x{
+            }
         }
         .peoples{
-            box-shadow: 0 4px 4px rgba(128, 128, 128, 0.418);
+            box-shadow: 0 0 12px 2px rgba(128, 128, 128, 0.418);
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 15px;
-            @include media-min-md{
-                width: 48%;
+            @include media-min-xl{
+                justify-content: unset;
+                width: 80%;
+            }
+            @include media-min-xl-x{
+                width: 70%;
+                margin-top: 30px;
             }
             &:hover{
                 background: linear-gradient(135deg, rgb(64, 61, 233) 60%, rgba(80, 46, 202, 0.781));
@@ -498,6 +505,140 @@
                 h5{
                     @include font-style($font-light-bold);
                     padding: 10px 0;
+                }
+            }
+        }
+    }
+}
+.important-person-ceo{
+    padding: 15px;
+    @include media-min-md{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+    }
+    @include media-min-xl{
+        width: 80%;
+        margin: 0 auto 50px;
+        padding: 0;
+        grid-column-gap: 30px;
+    }
+    @include media-min-xl-x{
+        grid-column-gap: 50px;
+    }
+    .person-1-ceo{
+        box-shadow: 0 0 18px 2px rgba(128, 128, 128, 0.418);
+        margin-top: 15px;
+        &:hover{
+            border: 1px solid rgb(103, 101, 233);
+        }
+        .details-ceo{
+            padding: 20px 25px;
+            .info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 25px;
+                h5{
+                    font-size: 15px;
+                    @include font-style($font-regular);
+                }
+                .time{
+                    margin-right: 15px;
+                }
+                .ceo{
+                    margin-right: 5px;
+                }
+            }
+            h4{
+                @include font-style($font-bold-light);
+                font-size: 25px;
+                margin-bottom: 30px;
+                @include media-min-xl-x{
+                    font-size: 2rem;
+                }
+            }
+            a{
+                color: rgb(13, 85, 240);
+                @include media-min-xl-x{
+                    font-size: 1.4rem;
+                }
+            }
+        } 
+    }
+}
+.newsletter-section{
+    background: linear-gradient(130deg,#4b5beed8 10% ,#706eec 40%,#665de9e3 20%);
+    text-align: center;
+    padding:3rem 15px;
+    @include media-min-xl-x{
+        padding: 5rem 0;
+    }
+    .newsletter-wrapper{
+        @include media-min-md{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        h5{
+            color: whitesmoke;
+            @include font-style($font-bold-light);
+            font-size: 1.2rem;
+            padding: 15px 0;
+            @include media-min-md{
+                padding: 0
+            }
+            @include media-min-lg{
+               font-size: 1.4rem;
+            }
+            @include media-min-xl{
+                width: 48%;
+            }
+            @include media-min-xl-x{
+                font-size: 2rem;
+            }
+        }
+        .input-button{
+            margin-top: 1rem;
+            @include media-min-md{
+                padding: 0;
+                margin: 0;
+            }
+            @include media-min-xl{
+                width: 48%;
+            }
+            .subcribe-text{
+                width: 60%;
+                padding:  6px 15px;
+                color: grey;
+                border: 1px solid white;
+                @include media-min-md{
+                    padding: 8px 20px;
+                }
+                @include media-min-lg{
+                   padding: 10px 20px;
+                }
+                @include media-min-xl-x{
+                    font-size: 20px;
+                }
+            }
+            button{
+                padding: 6px 10px;
+                background: linear-gradient(150deg, darkorange 40%, #f3ba0efb 60%);
+                border: none;
+                @include font-style($font-bold-light);
+                color: whitesmoke;
+                cursor: pointer;
+                @include media-min-md{
+                    padding: 8px 20px;
+                }
+                @include media-min-lg{
+                    padding: 10px 20px;
+                }
+                @include media-min-xl-x{
+                    font-size: 20px;
                 }
             }
         }
