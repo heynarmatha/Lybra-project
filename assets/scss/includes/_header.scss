@@ -1,6 +1,20 @@
+header{
+position: sticky;
+top: 0;
+// background-color: rgba(0, 0, 0, 0.349);
+background-color: whitesmoke;
+// z-index: 4;
+// background: linear-gradient(#4b5beef6, #6672f0);
+// background: linear-gradient(135deg, #4052f6 10%,red,yellow,darkblue, #7983f3);
 .header-wrapper{
     // background-color: whitesmoke;
+    // position: -webkit-sticky; /* Safari */
+    // position: sticky;
+    // top: 0;
+    color: black;
     .nav-head{
+        // position: sticky;
+        // top: 0px;
         h2{
             font-size: 2rem;
             @include font-style($font-light);
@@ -18,7 +32,7 @@
         @include media-min-xl{
             width: 80%;
             margin: 0px auto;
-            padding: 2rem 0;
+            padding: 1rem 0;
         }
         .menus{
             @include media-min-lg{
@@ -41,14 +55,14 @@
                 color: black;
                 font-size: 18px;
                 @include font-style($font-bold-light);
-                border: 2px solid black;
                 border-radius: 20px;
                 padding: 10px 15px;
                 &:hover{
                     background-color: black;
-                    color: whitesmoke;
+                    color: white;
                 }
             }
         }
     }
+}
 }
